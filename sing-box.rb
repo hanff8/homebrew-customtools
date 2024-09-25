@@ -16,9 +16,10 @@ class SingBox < Formula
   end
 
   service do
-    system run [opt_bin/"sing-box", "run", "--config", etc/"sing-box/config.json", "--directory", var/"lib/sing-box"]
+    run [opt_bin/"sing-box", "run", "--config", etc/"sing-box/config.json"]
     run_type :immediate
     keep_alive true
+    WorkingDirectory var/"lib/sing-box"
   end
 
   test do
