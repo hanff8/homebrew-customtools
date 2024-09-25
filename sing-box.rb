@@ -19,7 +19,7 @@ class SingBox < Formula
     run [opt_bin/"sing-box", "run", "--config", etc/"sing-box/config.json"]
     run_type :immediate
     keep_alive true
-    WorkingDirectory var/"lib/sing-box"
+    working_dir var/"lib/sing-box"
   end
 
   test do
